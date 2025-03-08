@@ -4,6 +4,17 @@
 @endsection
 
 @section('content')
+@if (session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+@endif
+
+@if (session('danger'))
+    <div class="alert alert-danger">
+        {{session('danger')}}
+    </div>
+@endif
     <h1>SanberBook</h1>
     <h2>Social Media Developer Santai Berkualitas</h2>
     <p>Belajar dan Berbagi agar hidup ini semakin santai berkualitas</p>

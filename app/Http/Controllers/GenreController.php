@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\DB;
 use Carbon\Carbon;
+use App\Models\Genres;
 
 class GenreController extends Controller
 {
@@ -15,7 +16,7 @@ class GenreController extends Controller
     }
 
     public function show($id) {
-        $genre = DB::table('genres')->find($id);
+        $genre = Genres::find($id);
 
         return view('genres.detail', ['genre' => $genre]);
     }
